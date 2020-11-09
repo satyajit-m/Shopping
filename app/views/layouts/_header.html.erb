@@ -1,0 +1,14 @@
+<nav class="navbar navbar-inverse navbar-expand-lg bg-dark navbar-dark fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <%= link_to "Shopping Site", root_path, class: "navbar-brand" %>
+    </div>
+    <% if logged_in? %>
+      <p class="text-light">Hello, <%= current_user.email %></p>
+      <%= link_to "LogOut", logout_path, class: "btn btn-danger navbar-btn", data: { confirm: "Are you sure to logout?", }  %>
+    <% else %>
+      <%= button_to "Login", '/login', method: :get, class: "btn btn-success navbar-btn"%>
+      <%= button_to "Sign Up", '/users/new', method: :get, class: "btn btn-primary navbar-btn"%>
+    <%end%>
+  </div>
+</nav>

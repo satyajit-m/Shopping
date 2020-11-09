@@ -1,0 +1,14 @@
+@import "~bootstrap/scss/bootstrap.scss";
+
+body {
+  padding: 55px 0px 55px;
+  overflow: auto;
+}
+
+.alert {
+  position: absolute;
+  top: 55;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
